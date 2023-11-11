@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb7ls8o8bees7"]
+
+[ext_resource type="Script" path="res://Tile.cs" id="1_lwcsa"]
+
+[node name="Tile" type="Area2D"]
+script = ExtResource("1_lwcsa")

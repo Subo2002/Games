@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://p8wqxgi133xh"]
+
+[ext_resource type="PackedScene" uid="uid://c6aoy1h8orrrj" path="res://cube.tscn" id="1_dqsac"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_7mnpo"]
+scenes/1/scene = ExtResource("1_dqsac")
+
+[sub_resource type="TileSet" id="TileSet_lucik"]
+tile_shape = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetScenesCollectionSource_7mnpo")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = 1
+tile_set = SubResource("TileSet_lucik")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 0, 65536, 262143, 0, 65536)

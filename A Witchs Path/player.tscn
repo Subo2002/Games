@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf21le7x0onu"]
+
+[ext_resource type="Script" path="res://Player.cs" id="1_fsf0b"]
+[ext_resource type="Texture2D" uid="uid://ce1r12w5gfe7g" path="res://Art/AWP_TEST_Sphere.png" id="2_fjdsq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2u588"]
+radius = 16.0
+
+[node name="Player" type="Area2D"]
+y_sort_enabled = true
+collision_mask = 2
+script = ExtResource("1_fsf0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2u588")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fjdsq")

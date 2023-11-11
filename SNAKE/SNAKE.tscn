@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4jsk2midv0vj"]
+
+[ext_resource type="Script" path="res://SNAKE.cs" id="1_44q3m"]
+[ext_resource type="Texture2D" uid="uid://ph2wh0w627fn" path="res://Art/SnakeHead.png" id="2_stcw6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_on405"]
+size = Vector2(64, 63)
+
+[node name="SNAKE" type="Area2D"]
+script = ExtResource("1_44q3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_on405")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_stcw6")
