@@ -1,54 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxvuucjdhqk4r"]
+[gd_scene load_steps=2 format=3 uid="uid://dcv7q0jpxa1fa"]
 
-[ext_resource type="Script" path="res://bolt.cs" id="1_kpo7y"]
-[ext_resource type="Texture2D" uid="uid://xyumi1elk7ey" path="res://Art/Speller_FireBolt.png" id="2_g22kk"]
+[ext_resource type="Script" path="res://Bolt.cs" id="1_nl6bo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_72ank"]
-atlas = ExtResource("2_g22kk")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3h414"]
-atlas = ExtResource("2_g22kk")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rtgcw"]
-atlas = ExtResource("2_g22kk")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fwwwv"]
-atlas = ExtResource("2_g22kk")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_go2kp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_72ank")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3h414")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rtgcw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fwwwv")
-}],
-"loop": true,
-"name": &"FireBolt",
-"speed": 10.0
-}]
-
-[node name="Bolt" type="Area2D"]
-script = ExtResource("1_kpo7y")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(8, -5, 8, 2, 6, 4, 4, 4, -2, 1, -2, -2, -1, -5, 3, -7, 6, -7)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-texture_repeat = 1
-sprite_frames = SubResource("SpriteFrames_go2kp")
-animation = &"FireBolt"
-frame = 2
-frame_progress = 0.115887
+[node name="Bolt" type="Node"]
+script = ExtResource("1_nl6bo")

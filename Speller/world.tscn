@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://nudrlptm7w6m"]
+[gd_scene load_steps=6 format=3 uid="uid://nudrlptm7w6m"]
 
 [ext_resource type="Texture2D" uid="uid://bif8fn02wy2bp" path="res://Art/Speller_TileSet.png" id="1_nq8xr"]
 [ext_resource type="PackedScene" uid="uid://cf1uucf7dhg4t" path="res://player.tscn" id="2_eks30"]
+[ext_resource type="PackedScene" uid="uid://bbn5bjrbuky7g" path="res://mob.tscn" id="3_kgfmt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jfpi0"]
 texture = ExtResource("1_nq8xr")
@@ -45,3 +46,6 @@ process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="Mob" parent="." instance=ExtResource("3_kgfmt")]
+position = Vector2(306, 135)

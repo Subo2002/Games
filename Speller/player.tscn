@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://Jump.cs" id="7_qd2ot"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8h8s5"]
-radius = 14.0
 height = 46.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gapc2"]
@@ -112,6 +111,7 @@ position = Vector2(-2, 8)
 shape = SubResource("CapsuleShape2D_8h8s5")
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_u2x7j")
 animation = &"Idle"
 frame_progress = 0.0206465

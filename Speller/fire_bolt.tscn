@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://drnnkalk3imnm"]
+
+[ext_resource type="PackedScene" uid="uid://b4lla3e0ewdc0" path="res://spell_base.tscn" id="1_indbh"]
+[ext_resource type="Texture2D" uid="uid://xyumi1elk7ey" path="res://Art/Speller_FireBolt.png" id="2_vaug5"]
+[ext_resource type="PackedScene" uid="uid://dcv7q0jpxa1fa" path="res://bolt.tscn" id="3_ibgor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mxtj"]
+atlas = ExtResource("2_vaug5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvlq4"]
+atlas = ExtResource("2_vaug5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftmd0"]
+atlas = ExtResource("2_vaug5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5201r"]
+atlas = ExtResource("2_vaug5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsimw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mxtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvlq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftmd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5201r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FireBolt" node_paths=PackedStringArray("Form") instance=ExtResource("1_indbh")]
+Form = NodePath("Bolt")
+
+[node name="CollisionPolygon2D" parent="." index="0"]
+polygon = PackedVector2Array(8, 2, 8, -5, 5, -7, 0, -5, 0, 1, 6, 4)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_rsimw")
+
+[node name="Bolt" parent="." index="3" instance=ExtResource("3_ibgor")]
+speed = 100.0
